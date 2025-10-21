@@ -6,6 +6,7 @@ import CustomButton from '../CustomButton/CustomButton';
 import blog1Image from './assets/Blog1.png';
 import blog2Image from './assets/blog2.png';
 import blog3Image from './assets/blog3.png';
+import { CustomSection } from '../CustomSections/CustomSection';
 
 export default function BlogSection() {
   const blogPosts = [
@@ -27,7 +28,7 @@ export default function BlogSection() {
   ];
 
   return (
-    <section className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-8 lg:px-32">
+    <CustomSection className="bg-white py-12 sm:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="font-bold text-3xl sm:text-4xl lg:text-5xl text-charcoal-gray mb-4 sm:mb-6">
@@ -120,6 +121,6 @@ export default function BlogSection() {
           </CustomButton>
         </div>
       </div>
-    </section>
+    </CustomSection>
   );
 }

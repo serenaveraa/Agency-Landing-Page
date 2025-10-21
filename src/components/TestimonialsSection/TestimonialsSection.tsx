@@ -6,6 +6,7 @@ import happyClient from './assets/happy_client.png';
 import quoteAsset from './assets/commas.png';
 import leftSliderBtn from './assets/Slider btn lft 1.png';
 import rightSliderBtn from './assets/Slider btn rgt 1.png';
+import { CustomSection } from '../CustomSections/CustomSection';
 
 export default function TestimonialsSection() {
   const testimonial = {
@@ -16,7 +17,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="bg-white py-20 px-6 lg:px-32">
+    <CustomSection className="bg-white py-20">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-proxima font-bold text-4xl lg:text-5xl text-charcoal-gray mb-6">
@@ -82,6 +83,6 @@ export default function TestimonialsSection() {
           </button>
         </div>
       </div>
-    </section>
+    </CustomSection>
   );
 }

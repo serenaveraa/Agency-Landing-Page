@@ -6,6 +6,7 @@ import CustomButton from '../CustomButton/CustomButton';
 import addressIcon from './assets/adress_icon.png';
 import contactIcon from './assets/contact_icon.png';
 import emailIcon from './assets/email_icon.png';
+import { CustomSection } from '../CustomSections/CustomSection';
 
 export default function ContactSection() {
   return (
@@ -22,7 +23,7 @@ export default function ContactSection() {
       </section>
 
       {/* Contact Information and Form Section - Blue Background */}
-      <section className="bg-blue-sky py-12 sm:py-16 lg:py-20 px-4 sm:px-8 lg:px-32">
+      <CustomSection className="bg-blue-sky py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
             {/* Left Column - Contact Information */}
@@ -121,7 +122,7 @@ export default function ContactSection() {
             </div>
           </div>
         </div>
-      </section>
+      </CustomSection>
     </>
   );
 }
