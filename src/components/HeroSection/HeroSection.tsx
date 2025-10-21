@@ -30,20 +30,20 @@ export default function HeroSection() {
           {/* ───────────── IMAGE SIDE ───────────── */}
           <div className="relative flex justify-center md:justify-end items-end order-2 md:order-last">
             {/* Decorative dots */}
-            <div className="absolute top-2 sm:top-4 left-2 sm:left-4 z-0 pt-6 md:pt-8 lg:pt-12">
+            <div className="absolute top-2 md:top-4 left-1 lg:left-12 z-0 pt-6 md:pt-8 lg:pt-12">
               <img
                 src={lilDots}
                 alt="Decorative dots pattern"
-                className="w-[92.5px] h-[92.5px] sm:w-[92.5px] sm:h-[92.5px] lg:w-[123.6px] lg:h-[123.6px]"
+                className="w-[92.5px] h-[92.5px] md:w-[92.5px] md:h-[92.5px] lg:w-[123.6px] lg:h-[123.6px]"
               />
             </div>
 
             {/* Main image */}
-            <div className="relative z-10 pt-6 md:pt-8 lg:pt-12">
+            <div className="relative z-10 pt-3 md:pt-8 lg:pt-7">
               <img
                 src={girlStudying}
                 alt="Woman studying design materials"
-                className="w-full h-auto object-cover translate-y-10 lg:translate-y-16 w-71.5 h-73 sm:w-70 h-71 lg:w-133 h-144"
+                className="w-full h-auto object-cover translate-y-10 lg:translate-y-16 w-71.5 h-73 md:w-70 h-71 lg:w-133 h-144"
               />
             </div>
           </div>
