@@ -4,15 +4,17 @@ import hamburgerIcon from './assets/hamburger.svg';
 
 export default function Header() {
   return (
-    <header className="flex items-center h-[100px] sm:h-[130px] px-4 sm:px-8 lg:px-32">
+    <header className="flex justify-between items-center h-[100px] sm:h-[130px] px-4 sm:px-8 lg:px-32">
+      {/* Logo */}
       <img 
         src={companyLogo} 
         alt="Company Logo" 
         width={70}
         height={70}
-        className="w-[70px] h-[70px]"
+        className="object-contain"
       />
-      <div className="w-[1100px]"></div>
+
+      {/* Hamburger menu */}
       <button>
         <img 
           src={hamburgerIcon} 
