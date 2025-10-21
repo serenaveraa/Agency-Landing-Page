@@ -15,7 +15,7 @@ export default {
         'electric-blue': '#4361EE',
         'pale-lilac': '#F4F6FE',
         'dark-blue': '#03071B',
-        'text-gray': '#4F5863',
+        'pale-gray': '#4F5863',
       },
     },
   },
