@@ -11,13 +11,11 @@ import { CustomSection } from '../CustomSections/CustomSection';
 export default function TestimonialsSection() {
   const testimonial = {
     text: "Their design process is really unique. They collaborated with us on our project. The communication was simple and transparent. They have a talented team of designer who understands the insights very clearly and continues to push their efforts.",
-    author: "John Smith",
-    role: "CEO, TechStart",
     image: happyClient
   };
 
   return (
-    <CustomSection className="bg-white py-20">
+    <CustomSection className="bg-white py-20 h-247 sm:h-275 lg:h-238 ">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-proxima font-bold text-4xl lg:text-5xl text-charcoal-gray mb-6">
@@ -38,34 +36,32 @@ export default function TestimonialsSection() {
             />
           </button>
           
-          {/* Testimonial Card - Less Wide */}
-          <div className="bg-pale-lilac rounded-xl p-8 lg:p-12 max-w-4xl mx-auto">
+          {/* Testimonial Card */}
+          <div className="bg-pale-lilac rounded-xl p-8 lg:p-12 max-w-4xl mx-auto w-83 h-165 md:w-120 md:h-171 lg:w-242 lg:h-95">
             {/* Testimonial Content */}
             <div className="flex items-center space-x-8 lg:space-x-16">
-              {/* Client Image - Takes ~1/3 of the space */}
-              <div className="flex-shrink-0 w-1/3 flex justify-center">
+              {/* Client Image  */}
+              <div className="flex-shrink-0 flex justify-center">
                 <img 
                   src={testimonial.image}
-                  alt={`${testimonial.author} testimonial`}
-                  className="w-32 h-32 lg:w-40 lg:h-40 rounded-full object-cover"
+                  alt="Client testimonial"
+                  className="h-60 sm:h-73 object-cover"
                 />
               </div>
 
-              {/* Quote - Takes ~2/3 of the space */}
-              <div className="flex-1 w-2/3">
+              {/* Quote */}
+              <div className="flex-1 text-cat-gray">
                 <div className="mb-4">
                   <img 
                     src={quoteAsset} 
                     alt="Quote mark" 
-                    className="w-12 h-12 lg:w-16 lg:h-16 object-contain"
+                    className="w-9 h-8 object-contain"
                   />
                 </div>
                 <p className="font-proxima text-lg lg:text-xl text-gray-700 leading-relaxed mb-6">
                   {testimonial.text}
                 </p>
                 <div className="font-proxima text-charcoal-gray font-semibold">
-                  <div className="font-bold">{testimonial.author}</div>
-                  <div className="text-sm text-gray-600">{testimonial.role}</div>
                 </div>
               </div>
             </div>
