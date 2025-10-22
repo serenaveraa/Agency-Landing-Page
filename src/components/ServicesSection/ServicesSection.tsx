@@ -1,8 +1,9 @@
 import React from 'react';
 import DecorativeUnderline from '../DecorativeUnderline/DecorativeUnderline';
 import CustomButton from '../CustomButton/CustomButton';
+import { CustomSection } from '../CustomSections/CustomSection';
+import ServiceCard from './ServiceCard';
 
-// Import all the assets
 import logoDesignBkg from './assets/logo_design_bkg.png';
 import logoDesignIcon from './assets/Logo design icon 1.png';
 import developmentBkg from './assets/development_bck.png';
@@ -19,114 +20,48 @@ import motionDesignBkg from './assets/motion_design_bck.png';
 import motionDesignIcon from './assets/motion-desing-logo.png';
 import printDesignBkg from './assets/print_design_bck.png';
 import printDesignIcon from './assets/print-design-logo.png';
-import { CustomSection } from '../CustomSections/CustomSection';
 
 export default function ServicesSection() {
   const services = [
-    {
-      title: "Logo design",
-      background: logoDesignBkg,
-      icon: logoDesignIcon,
-      link: "Request a quote →"
-    },
-    {
-      title: "Development",
-      background: developmentBkg,
-      icon: developmentIcon,
-      link: "Request a quote →"
-    },
-    {
-      title: "Ui/Ux Design",
-      background: uxuiBkg,
-      icon: uxuiIcon,
-      link: "Request a quote →"
-    },
-    {
-      title: "Digital Marketing",
-      background: digitalMrkBkg,
-      icon: digitalMrkIcon,
-      link: "Request a quote →"
-    },
-    {
-      title: "Content Writing",
-      background: contentWritingBkg,
-      icon: contentWritingIcon,
-      link: "Request a quote →"
-    },
-    {
-      title: "Email Marketing",
-      background: emailMrkBkg,
-      icon: emailMrkIcon,
-      link: "Request a quote →"
-    },
-    {
-      title: "Motion Design",
-      background: motionDesignBkg,
-      icon: motionDesignIcon,
-      link: "Request a quote →"
-    },
-    {
-      title: "Print Design",
-      background: printDesignBkg,
-      icon: printDesignIcon,
-      link: "Request a quote →"
-    }
+    { title: 'Logo design', background: logoDesignBkg, icon: logoDesignIcon },
+    { title: 'Development', background: developmentBkg, icon: developmentIcon },
+    { title: 'UI/UX Design', background: uxuiBkg, icon: uxuiIcon },
+    { title: 'Digital Marketing', background: digitalMrkBkg, icon: digitalMrkIcon },
+    { title: 'Content Writing', background: contentWritingBkg, icon: contentWritingIcon },
+    { title: 'Email Marketing', background: emailMrkBkg, icon: emailMrkIcon },
+    { title: 'Motion Design', background: motionDesignBkg, icon: motionDesignIcon },
+    { title: 'Print Design', background: printDesignBkg, icon: printDesignIcon },
   ];
 
   return (
-    <CustomSection className="bg-blue-sky py-18 sm:py-16 lg:py-20">
-      <div className="max-w-7xl mx-auto">
+    <CustomSection className="bg-blue-sky h-160 py-18 sm:h-250 sm:py-16 lg:py-20">
+      <div className="w-full max-w-7xl mx-auto justify-center">
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="font-proxima font-bold text-3xl sm:text-4xl lg:text-5xl text-charcoal-gray mb-4 sm:mb-6">
+          <h2 className="font-proxima font-bold text-6 sm:text-4xl lg:text-5xl text-charcoal-gray mb-4 sm:mb-6">
             Our <span className="relative inline-block pb-2">Services<DecorativeUnderline /></span>
           </h2>
         </div>
 
-        {/* 8 Service Cards in 2x4 Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12">
-          {services.map((service, index) => (
-            <div key={index} className="relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group cursor-pointer">
-              {/* Background Image */}
-              <div 
-                className="relative h-64 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url(${service.background})` }}
+        <div className="grid grid-cols-2 gap-5 mb-12 sm:grid-cols-2 sm:grid-rows-2 sm:gap-y-10 sm:gap-x-5 lg:grid-cols-4 lg:gap-x-7 lg:gap-y-12 justify-items-center">
+           {services.map((service, i) => (
+              <div
+                key={i}
+                className={`${i >= 4 ? 'hidden lg:block' : ''}`}
               >
-                {/* Dark Overlay */}
-                <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-opacity duration-300"></div>
-                
-                {/* Content */}
-                <div className="relative z-10 h-full flex flex-col justify-center items-center p-6">
-                  {/* Icon */}
-                  <div className="flex justify-center mb-6">
-                    <img 
-                      src={service.icon} 
-                      alt={`${service.title} icon`}
-                      className="w-12 h-12 object-contain"
-                    />
-                  </div>
-                  
-                  {/* Title and Link */}
-                  <div className="text-center">
-                    <h3 className="font-proxima text-white font-bold text-lg mb-4">{service.title}</h3>
-                    <a 
-                      href="#" 
-                      className="font-proxima text-white text-sm font-medium hover:text-electric-blue transition-colors duration-200"
-                    >
-                      {service.link}
-                    </a>
-                  </div>
-                </div>
+                <ServiceCard {...service} link="Request a quote" />
               </div>
-            </div>
-          ))}
+            ))}
         </div>
 
-        {/* Bottom Call to Action Button */}
-        <div className="text-center">
-          <CustomButton size="lg" className="font-proxima">
-            Request a Quote
+        {/* CTA Button */}
+        <div className="flex justify-center lg:pt-15">
+          <CustomButton size="lg" className="">
+            <span className="block sm:hidden">View more</span>
+            <span className="hidden sm:block">Request a Quote</span>
           </CustomButton>
         </div>
+
+
       </div>
     </CustomSection>
   );
